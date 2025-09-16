@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 
 const roadmapItems = [
   {
-    version: "EOS",
+    version: "Eos",
     title: "GraceAI eos1.1",
     status: "current",
     icon: CheckCircle2,
@@ -16,7 +16,7 @@ const roadmapItems = [
     timeline: "Launching Very Soon (This Month)"
   },
   {
-    version: "THALIA",
+    version: "Thalia",
     title: "GraceAI thalia2.4",
     status: "upcoming",
     icon: Clock,
