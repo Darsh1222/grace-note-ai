@@ -1,10 +1,14 @@
 import { Button } from "@/components/ui/button";
-import { Mic, Music, TrendingUp, Zap } from "lucide-react";
+import { Mic, Music, TrendingUp } from "lucide-react";
+import { WaitlistModal } from "@/components/WaitlistModal";
+import { useState } from "react";
 import graceaiPractice from "@/assets/graceai-practice-screen.png";
 import graceaiHome from "@/assets/graceai-home-screen.png";
 import graceaiAnalytics from "@/assets/graceai-analytics-screen.png";
 
 export const Hero = () => {
+  const [showWaitlist, setShowWaitlist] = useState(false);
+
   return (
     <section className="min-h-screen bg-gradient-dark relative overflow-hidden">
       {/* Animated glow effects */}
@@ -34,8 +38,12 @@ export const Hero = () => {
 
             <div className="flex flex-wrap gap-4">
               <Button variant="hero" size="xl" className="group">
-                <Zap className="w-5 h-5 group-hover:animate-pulse" />
+                <Music className="w-5 h-5 group-hover:animate-pulse" />
                 Download for iOS
+              </Button>
+              <Button variant="glow" size="xl" onClick={() => setShowWaitlist(true)}>
+                <Music className="w-5 h-5" />
+                Join Waitlist
               </Button>
             </div>
 
@@ -111,6 +119,8 @@ export const Hero = () => {
           </div>
         </div>
       </div>
+      
+      <WaitlistModal open={showWaitlist} onOpenChange={setShowWaitlist} />
     </section>
   );
 };
