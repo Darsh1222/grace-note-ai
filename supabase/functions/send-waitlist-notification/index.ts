@@ -1,5 +1,6 @@
 import { serve } from "https://deno.land/std@0.168.0/http/server.ts"
 import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
+import { Resend } from 'npm:resend@2.0.0'
 
 const corsHeaders = {
   'Access-Control-Allow-Origin': '*',
@@ -15,34 +16,43 @@ serve(async (req) => {
   try {
     const { email, name, adminEmail } = await req.json()
 
-    // Initialize Supabase client
+    // Initialize Resend client
+    const resend = new Resend(Deno.env.get('RESEND_API_KEY'))
+
+    // Initialize Supabase client  
     const supabaseUrl = Deno.env.get('SUPABASE_URL')!
     const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!
     const supabase = createClient(supabaseUrl, supabaseServiceKey)
 
-    // Send email notification (using a simple email service)
+    // Get total waitlist count
+    const { count } = await supabase.from('waitlist').select('*', { count: 'exact', head: true })
+
+    // Send email notification using Resend
     const emailSubject = `New GraceAI Waitlist Signup: ${name}`
     const emailBody = `
-      New user joined the GraceAI waitlist!
+      <h2>🎉 New GraceAI Waitlist Signup!</h2>
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Joined:</strong> ${new Date().toLocaleString()}</p>
+      <p><strong>Total Waitlist Members:</strong> ${count || 0}</p>
       
-      Name: ${name}
-      Email: ${email}
-      Joined: ${new Date().toISOString()}
-      
-      Total waitlist count can be checked in your Supabase dashboard.
+      <hr>
+      <p><em>Check your Supabase dashboard for full waitlist management.</em></p>
     `
 
-    // For now, we'll log this - you can integrate with email services like Resend, SendGrid, etc.
-    console.log('Waitlist notification:', {
-      to: adminEmail,
+    const { error: emailError } = await resend.emails.send({
+      from: 'GraceAI <onboarding@resend.dev>',
+      to: [adminEmail],
       subject: emailSubject,
-      body: emailBody
+      html: emailBody
     })
 
-    // You can add actual email sending here with services like:
-    // - Resend: https://resend.com/
-    // - SendGrid: https://sendgrid.com/
-    // - Postmark: https://postmarkapp.com/
+    if (emailError) {
+      console.error('Email sending error:', emailError)
+      throw new Error(`Failed to send email: ${emailError.message}`)
+    }
+
+    console.log('Waitlist notification sent successfully to:', adminEmail)
     
     return new Response(
       JSON.stringify({ success: true, message: 'Notification sent' }),
