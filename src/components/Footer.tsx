@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <footer className="bg-background border-t border-border/50 py-12">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-3 gap-8">
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -28,23 +28,12 @@ export const Footer = () => {
             </div>
           </div>
 
-          {/* Support */}
-          <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Support</h3>
-            <div className="space-y-2 text-sm">
-              <a href="#" className="block text-muted-foreground hover:text-foreground transition-smooth">Help Center</a>
-              <a href="#" className="block text-muted-foreground hover:text-foreground transition-smooth">Contact Us</a>
-              <a href="#" className="block text-muted-foreground hover:text-foreground transition-smooth">Community</a>
-            </div>
-          </div>
-
           {/* Legal */}
           <div className="space-y-4">
             <h3 className="font-semibold text-foreground">Legal</h3>
             <div className="space-y-2 text-sm">
-              <a href="#" className="block text-muted-foreground hover:text-foreground transition-smooth">Privacy Policy</a>
-              <a href="#" className="block text-muted-foreground hover:text-foreground transition-smooth">Terms of Service</a>
-              <a href="#" className="block text-muted-foreground hover:text-foreground transition-smooth">Cookie Policy</a>
+              <a href="/privacy-policy" className="block text-muted-foreground hover:text-foreground transition-smooth">Privacy Policy</a>
+              <a href="/terms-of-service" className="block text-muted-foreground hover:text-foreground transition-smooth">Terms of Service</a>
             </div>
           </div>
         </div>
