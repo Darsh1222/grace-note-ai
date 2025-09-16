@@ -14,13 +14,34 @@ export const Navigation = () => {
           </div>
           
           <div className="hidden md:flex items-center space-x-8">
-            <a href="#features" className="text-muted-foreground hover:text-foreground transition-smooth">
+            <a 
+              href="#features" 
+              className="text-muted-foreground hover:text-foreground transition-smooth"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Features
             </a>
-            <a href="#how-it-works" className="text-muted-foreground hover:text-foreground transition-smooth">
+            <a 
+              href="#how-it-works" 
+              className="text-muted-foreground hover:text-foreground transition-smooth"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               How It Works
             </a>
-            <a href="#download" className="text-muted-foreground hover:text-foreground transition-smooth">
+            <a 
+              href="#download" 
+              className="text-muted-foreground hover:text-foreground transition-smooth"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('download')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
               Download
             </a>
           </div>

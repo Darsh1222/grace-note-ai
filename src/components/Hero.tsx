@@ -1,6 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { Mic, Music, TrendingUp, Zap } from "lucide-react";
-import graceaiHero from "@/assets/graceai-hero.jpg";
+import graceaiPractice from "@/assets/graceai-practice-screen.png";
+import graceaiHome from "@/assets/graceai-home-screen.png";
+import graceaiAnalytics from "@/assets/graceai-analytics-screen.png";
 
 export const Hero = () => {
   return (
@@ -35,10 +37,6 @@ export const Hero = () => {
                 <Zap className="w-5 h-5 group-hover:animate-pulse" />
                 Download for iOS
               </Button>
-              <Button variant="glow" size="xl">
-                <Music className="w-5 h-5" />
-                Watch Demo
-              </Button>
             </div>
 
             {/* Features preview */}
@@ -64,20 +62,52 @@ export const Hero = () => {
             </div>
           </div>
 
-          {/* Right content - Hero image */}
+          {/* Right content - App screenshots showcase */}
           <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-elegant">
-              <img 
-                src={graceaiHero} 
-                alt="GraceAI App Interface" 
-                className="w-full h-auto"
-              />
-              <div className="absolute inset-0 bg-gradient-primary/10"></div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {/* Practice Screen */}
+              <div className="relative transform hover:scale-105 transition-smooth">
+                <div className="relative rounded-2xl overflow-hidden shadow-elegant">
+                  <img 
+                    src={graceaiPractice} 
+                    alt="GraceAI Practice Screen" 
+                    className="w-full h-auto"
+                  />
+                  <div className="absolute inset-0 bg-gradient-primary/10"></div>
+                </div>
+                <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-primary rounded-full shadow-glow-primary animate-pulse"></div>
+              </div>
+
+              {/* Home Screen */}
+              <div className="relative transform hover:scale-105 transition-smooth md:mt-8">
+                <div className="relative rounded-2xl overflow-hidden shadow-elegant">
+                  <img 
+                    src={graceaiHome} 
+                    alt="GraceAI Home Dashboard" 
+                    className="w-full h-auto"
+                  />
+                  <div className="absolute inset-0 bg-gradient-primary/10"></div>
+                </div>
+                <div className="absolute -top-2 -left-2 w-8 h-8 bg-gradient-glow rounded-full shadow-glow-secondary animate-bounce"></div>
+              </div>
+
+              {/* Analytics Screen */}
+              <div className="relative transform hover:scale-105 transition-smooth">
+                <div className="relative rounded-2xl overflow-hidden shadow-elegant">
+                  <img 
+                    src={graceaiAnalytics} 
+                    alt="GraceAI Analytics Screen" 
+                    className="w-full h-auto"
+                  />
+                  <div className="absolute inset-0 bg-gradient-primary/10"></div>
+                </div>
+                <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-gradient-primary rounded-full shadow-glow-primary animate-pulse"></div>
+              </div>
             </div>
             
             {/* Floating elements */}
-            <div className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-primary rounded-full shadow-glow-primary animate-bounce"></div>
-            <div className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-glow rounded-full shadow-glow-secondary animate-pulse"></div>
+            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-16 h-16 bg-gradient-primary rounded-full shadow-glow-primary animate-bounce opacity-60"></div>
+            <div className="absolute -bottom-4 left-1/4 w-12 h-12 bg-gradient-glow rounded-full shadow-glow-secondary animate-pulse opacity-40"></div>
           </div>
         </div>
       </div>
