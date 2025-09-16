@@ -10,7 +10,7 @@ const roadmapItems = [
     features: [
       "AI-powered music practice analysis",
       "Real-time feedback system",
-      "Basic performance tracking",
+      "Performance tracking",
       "Mobile app for iOS & Android"
     ],
     timeline: "Launching Very Soon (This Month)"
