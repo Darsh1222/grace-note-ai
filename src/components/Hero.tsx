@@ -37,7 +37,7 @@ export const Hero = () => {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Button variant="hero" size="xl" className="group">
+              <Button variant="hero" size="xl" className="group" disabled>
                 <Music className="w-5 h-5 group-hover:animate-pulse" />
                 Download for iOS
               </Button>
