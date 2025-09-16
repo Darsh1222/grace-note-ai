@@ -3,8 +3,8 @@ import { Card } from "@/components/ui/card";
 
 const roadmapItems = [
   {
-    version: "v1.0",
-    title: "Launch",
+    version: "Beta",
+    title: "GraceAI Beta",
     status: "current",
     icon: CheckCircle2,
     features: [
@@ -13,46 +13,20 @@ const roadmapItems = [
       "Basic performance tracking",
       "Mobile app for iOS & Android"
     ],
-    timeline: "Available Now"
+    timeline: "Launching Very Soon (This Month)"
   },
   {
     version: "v1.1",
-    title: "Enhanced Analytics",
+    title: "Enhanced User Experience",
     status: "upcoming",
     icon: Clock,
     features: [
-      "Advanced practice insights",
-      "Progress visualization charts",
-      "Weekly/monthly reports",
-      "Practice goal setting"
+      "Applying user feedback",
+      "UX design changes",
+      "Enhanced user experience",
+      "Improved interface design"
     ],
     timeline: "Coming Soon"
-  },
-  {
-    version: "v2.0",
-    title: "Community Features",
-    status: "planned",
-    icon: Star,
-    features: [
-      "Share practice sessions",
-      "Collaborative learning",
-      "Teacher-student connections",
-      "Virtual practice rooms"
-    ],
-    timeline: "Future Release"
-  },
-  {
-    version: "v3.0",
-    title: "AI Composition Assistant",
-    status: "planned",
-    icon: Zap,
-    features: [
-      "AI-generated practice exercises",
-      "Personalized difficulty scaling",
-      "Smart practice recommendations",
-      "Advanced AI coaching"
-    ],
-    timeline: "In Development"
   }
 ];
 
