@@ -22,7 +22,7 @@ export const DownloadSection = () => {
                   </span>
                 </h2>
                 <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                  Join thousands of musicians who are already improving their skills with GraceAI's intelligent practice analysis.
+                  Be among the first musicians to experience the future of intelligent practice analysis with GraceAI.
                 </p>
               </div>
 

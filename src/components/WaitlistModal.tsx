@@ -169,7 +169,7 @@ export const WaitlistModal = ({ open, onOpenChange }: WaitlistModalProps) => {
         </form>
 
         <div className="text-center text-xs text-muted-foreground pt-4 border-t border-border/50">
-          🎵 Join thousands of musicians already on the waitlist
+          🎵 Be among the first to experience the future of music practice
         </div>
       </DialogContent>
     </Dialog>
