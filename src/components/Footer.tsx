@@ -4,7 +4,7 @@ export const Footer = () => {
   return (
     <footer className="bg-background border-t border-border/50 py-12">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 gap-8">
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
@@ -16,16 +16,6 @@ export const Footer = () => {
             <p className="text-muted-foreground text-sm">
               AI-powered music practice analysis for musicians who want to perfect their craft.
             </p>
-          </div>
-
-          {/* Product */}
-          <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Product</h3>
-            <div className="space-y-2 text-sm">
-              <a href="#features" className="block text-muted-foreground hover:text-foreground transition-smooth">Features</a>
-              <a href="#how-it-works" className="block text-muted-foreground hover:text-foreground transition-smooth">How It Works</a>
-              <a href="#download" className="block text-muted-foreground hover:text-foreground transition-smooth">Download</a>
-            </div>
           </div>
 
           {/* Legal */}
