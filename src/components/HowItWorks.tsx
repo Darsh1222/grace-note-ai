@@ -85,12 +85,6 @@ export const HowItWorks = () => {
             </Card>
           ))}
         </div>
-
-        <div className="text-center mt-16">
-          <Button variant="hero" size="xl">
-            Get Started Today
-          </Button>
-        </div>
       </div>
     </section>
   );
