@@ -31,7 +31,7 @@ const roadmapItems = [
   {
     version: "???",
     title: "GraceAI",
-    titleBlurred: "██████",
+    titleBlurred: "████",
     status: "locked",
     icon: Star,
     features: [
@@ -45,7 +45,7 @@ const roadmapItems = [
   {
     version: "???",
     title: "GraceAI",
-    titleBlurred: "████████",
+    titleBlurred: "██████",
     status: "locked",
     icon: Zap,
     features: [
@@ -74,10 +74,20 @@ export const Roadmap = () => {
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {roadmapItems.map((item, index) => {
             const Icon = item.icon;
+            
+            // Define hover colors for each version
+            const getHoverClass = () => {
+              if (item.status === 'current') return 'hover:shadow-glow-primary';
+              if (item.status === 'upcoming') return 'hover:shadow-[0_0_40px_hsl(var(--secondary)/0.4)]';
+              if (index === 2) return 'hover:shadow-[0_0_40px_hsl(0_70%_50%/0.4)]'; // Red for AI coaching
+              if (index === 3) return 'hover:shadow-[0_0_40px_hsl(260_70%_50%/0.4)]'; // Purple for multi-instrument
+              return 'hover:shadow-glow-primary';
+            };
+            
             return (
               <Card 
                 key={item.version}
-                className={`p-6 bg-gradient-card border-border/50 relative overflow-hidden group transition-smooth hover:shadow-glow-primary ${
+                className={`p-6 bg-gradient-card border-border/50 relative overflow-hidden group transition-smooth ${getHoverClass()} ${
                   item.status === 'current' ? 'ring-2 ring-primary/50' : ''
                 } ${
                   item.status === 'upcoming' ? 'opacity-90' : ''
@@ -110,7 +120,7 @@ export const Roadmap = () => {
                   }`}>
                     {item.title}
                     {item.titleBlurred && (
-                      <span className="ml-1 filter blur-sm select-none opacity-70">
+                      <span className="ml-1 filter blur-[1px] select-none opacity-70">
                         {item.titleBlurred}
                       </span>
                     )}
