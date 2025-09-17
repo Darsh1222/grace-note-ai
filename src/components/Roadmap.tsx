@@ -131,7 +131,7 @@ export const Roadmap = () => {
                   }`}>
                     {item.title}
                     {item.titleBlurred && (
-                      <span className="ml-1 filter blur-[2px] select-none opacity-70">
+                      <span className="ml-1 filter blur-[4px] select-none opacity-70">
                         {item.titleBlurred}
                       </span>
                     )}
