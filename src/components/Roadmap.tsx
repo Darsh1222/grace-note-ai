@@ -27,6 +27,32 @@ const roadmapItems = [
       "Improved interface design"
     ],
     timeline: "Coming Soon"
+  },
+  {
+    version: "???",
+    title: "Name Not Yet Revealed",
+    status: "locked",
+    icon: Star,
+    features: [
+      "AI coaching integrated",
+      "Grace AI chatbot",
+      "Advanced practice guidance",
+      "Personalized learning paths"
+    ],
+    timeline: "Down the Road"
+  },
+  {
+    version: "???",
+    title: "Name Not Yet Revealed",
+    status: "locked",
+    icon: Zap,
+    features: [
+      "Multi instrument processing",
+      "Increased accuracy",
+      "Enhanced audio analysis",
+      "Professional-grade feedback"
+    ],
+    timeline: "Down the Road"
   }
 ];
 
@@ -51,6 +77,10 @@ export const Roadmap = () => {
                 key={item.version}
                 className={`p-6 bg-gradient-card border-border/50 relative overflow-hidden group transition-smooth hover:shadow-glow-primary ${
                   item.status === 'current' ? 'ring-2 ring-primary/50' : ''
+                } ${
+                  item.status === 'upcoming' ? 'opacity-90' : ''
+                } ${
+                  item.status === 'locked' ? 'opacity-60 hover:opacity-70' : ''
                 }`}
               >
                 <div className="relative z-10">
@@ -60,28 +90,40 @@ export const Roadmap = () => {
                         ? 'bg-primary/20 text-primary border border-primary/30'
                         : item.status === 'upcoming'
                         ? 'bg-secondary/20 text-secondary border border-secondary/30'
-                        : 'bg-accent/20 text-accent-foreground border border-accent/30'
+                        : 'bg-muted/40 text-muted-foreground border border-muted/50'
                     }`}>
                       {item.version}
                     </span>
                     <Icon className={`w-6 h-6 ${
-                      item.status === 'current' ? 'text-primary' : 'text-muted-foreground'
+                      item.status === 'current' 
+                        ? 'text-primary' 
+                        : item.status === 'upcoming'
+                        ? 'text-muted-foreground'
+                        : 'text-muted-foreground/60'
                     }`} />
                   </div>
 
-                  <h3 className="text-xl font-bold mb-2 text-foreground">
+                  <h3 className={`text-xl font-bold mb-2 ${
+                    item.status === 'locked' ? 'text-muted-foreground' : 'text-foreground'
+                  }`}>
                     {item.title}
                   </h3>
 
-                  <p className="text-sm text-muted-foreground mb-4">
+                  <p className={`text-sm mb-4 ${
+                    item.status === 'locked' ? 'text-muted-foreground/70' : 'text-muted-foreground'
+                  }`}>
                     {item.timeline}
                   </p>
 
                   <ul className="space-y-2">
                     {item.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start space-x-2 text-sm">
-                        <div className="w-1.5 h-1.5 rounded-full bg-primary/60 mt-2 flex-shrink-0" />
-                        <span className="text-muted-foreground">{feature}</span>
+                        <div className={`w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 ${
+                          item.status === 'locked' ? 'bg-muted-foreground/40' : 'bg-primary/60'
+                        }`} />
+                        <span className={
+                          item.status === 'locked' ? 'text-muted-foreground/70' : 'text-muted-foreground'
+                        }>{feature}</span>
                       </li>
                     ))}
                   </ul>
