@@ -131,7 +131,7 @@ export const Roadmap = () => {
                   }`}>
                     {item.title}
                     {item.titleBlurred && (
-                      <span className="ml-1 filter blur-[1px] select-none opacity-70">
+                      <span className="ml-1 filter blur-[2px] select-none opacity-70">
                         {item.titleBlurred}
                       </span>
                     )}
@@ -147,7 +147,11 @@ export const Roadmap = () => {
                     {item.features.map((feature, featureIndex) => (
                       <li key={featureIndex} className="flex items-start space-x-2 text-sm">
                         <div className={`w-1.5 h-1.5 rounded-full mt-2 flex-shrink-0 ${
-                          item.status === 'locked' ? 'bg-muted-foreground/40' : 'bg-primary/60'
+                          item.status === 'locked' 
+                            ? 'bg-muted-foreground/40' 
+                            : item.status === 'upcoming'
+                            ? 'bg-secondary/60'
+                            : 'bg-primary/60'
                         }`} />
                         <span className={
                           item.status === 'locked' ? 'text-muted-foreground/70' : 'text-muted-foreground'
