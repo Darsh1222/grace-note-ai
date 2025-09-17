@@ -31,7 +31,7 @@ const roadmapItems = [
   {
     version: "???",
     title: "GraceAI",
-    titleBlurred: "████",
+    titleBlurred: "nexus4.7",
     status: "locked",
     icon: Star,
     features: [
@@ -45,7 +45,7 @@ const roadmapItems = [
   {
     version: "???",
     title: "GraceAI",
-    titleBlurred: "██████",
+    titleBlurred: "harmony8.2",
     status: "locked",
     icon: Zap,
     features: [
@@ -76,25 +76,36 @@ export const Roadmap = () => {
             const Icon = item.icon;
             
             // Define hover colors for each version
-            const getHoverClass = () => {
-              if (item.status === 'current') return 'hover:shadow-glow-primary';
-              if (item.status === 'upcoming') return 'hover:shadow-[0_0_40px_hsl(var(--secondary)/0.4)]';
-              if (index === 2) return 'hover:shadow-[0_0_40px_hsl(0_70%_50%/0.4)]'; // Red for AI coaching
-              if (index === 3) return 'hover:shadow-[0_0_40px_hsl(260_70%_50%/0.4)]'; // Purple for multi-instrument
-              return 'hover:shadow-glow-primary';
+            const getColorOverlay = () => {
+              if (item.status === 'current') return 'hsl(var(--primary))';
+              if (item.status === 'upcoming') return 'hsl(var(--secondary))';
+              if (index === 2) return 'hsl(0, 70%, 50%)'; // Red for AI coaching
+              if (index === 3) return 'hsl(260, 70%, 50%)'; // Purple for multi-instrument
+              return 'hsl(var(--primary))';
             };
             
             return (
               <Card 
                 key={item.version}
-                className={`p-6 bg-gradient-card border-border/50 relative overflow-hidden group transition-smooth ${getHoverClass()} ${
+                className={`p-6 bg-gradient-card border-border/50 relative overflow-hidden group transition-smooth ${
                   item.status === 'current' ? 'ring-2 ring-primary/50' : ''
                 } ${
                   item.status === 'upcoming' ? 'opacity-90' : ''
                 } ${
                   item.status === 'locked' ? 'opacity-60 hover:opacity-70' : ''
                 }`}
+                style={{
+                  ['--hover-color' as any]: getColorOverlay()
+                }}
               >
+                {/* Animated color overlay */}
+                <div 
+                  className="absolute inset-0 opacity-0 group-hover:opacity-10 transition-all duration-500 ease-out transform -translate-x-full group-hover:translate-x-0"
+                  style={{
+                    background: `var(--hover-color)`,
+                    clipPath: 'polygon(0 0, 100% 0, 80% 100%, 0% 100%)'
+                  }}
+                />
                 <div className="relative z-10">
                   <div className="flex items-center justify-between mb-4">
                     <span className={`px-3 py-1 rounded-full text-sm font-semibold ${
