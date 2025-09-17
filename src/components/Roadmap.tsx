@@ -30,7 +30,8 @@ const roadmapItems = [
   },
   {
     version: "???",
-    title: "Name Not Yet Revealed",
+    title: "GraceAI",
+    titleBlurred: "██████",
     status: "locked",
     icon: Star,
     features: [
@@ -43,7 +44,8 @@ const roadmapItems = [
   },
   {
     version: "???",
-    title: "Name Not Yet Revealed",
+    title: "GraceAI",
+    titleBlurred: "████████",
     status: "locked",
     icon: Zap,
     features: [
@@ -107,6 +109,11 @@ export const Roadmap = () => {
                     item.status === 'locked' ? 'text-muted-foreground' : 'text-foreground'
                   }`}>
                     {item.title}
+                    {item.titleBlurred && (
+                      <span className="ml-1 filter blur-sm select-none opacity-70">
+                        {item.titleBlurred}
+                      </span>
+                    )}
                   </h3>
 
                   <p className={`text-sm mb-4 ${
