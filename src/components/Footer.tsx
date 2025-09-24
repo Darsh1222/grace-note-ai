@@ -1,8 +1,6 @@
 import graceaiLogo from "@/assets/graceai-logo.png";
-
 export const Footer = () => {
-  return (
-    <footer className="bg-background border-t border-border/50 py-12">
+  return <footer className="bg-background border-t border-border/50 py-12">
       <div className="container mx-auto px-6">
         <div className="grid md:grid-cols-2 gap-8">
           {/* Brand */}
@@ -29,11 +27,8 @@ export const Footer = () => {
         </div>
 
         <div className="border-t border-border/50 mt-8 pt-8 text-center">
-          <p className="text-muted-foreground text-sm">
-            © 2024 GraceAI. All rights reserved. Made with ❤️ for musicians.
-          </p>
+          <p className="text-muted-foreground text-sm">© 2025 GraceAI. All rights reserved. Made with ❤️ for musicians.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
