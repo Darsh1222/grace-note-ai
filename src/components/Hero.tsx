@@ -23,16 +23,16 @@ export const Hero = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <h1 className="text-5xl lg:text-7xl font-bold leading-tight">
-                Perfect Your
+                Bold. Smart.
                 <span className="bg-gradient-primary bg-clip-text text-transparent block">
-                  Music Practice
+                  Seamless.
                 </span>
-                with AI
               </h1>
               
               <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
+                Like how grace notes frame silence, GraceAI frames your musical journey. 
                 Record your practice sessions, get instant AI-powered feedback on accuracy, 
-                timing, and rhythm. Transform how you learn music with GraceAI.
+                timing, and rhythm. Transform how you learn music with precision and elegance.
               </p>
             </div>
 
