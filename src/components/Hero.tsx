@@ -34,7 +34,7 @@ export const Hero = () => {
                   Record your practice sessions, get instant AI-powered feedback on accuracy, 
                   timing, and rhythm.
                 </p>
-                <p className="text-lg text-muted-foreground/80 leading-relaxed max-w-lg">Transform how you learn music with precision and elegance, with GraceAI</p>
+                <p className="text-lg text-muted-foreground/80 leading-relaxed max-w-lg">Transform how you learn music with precision and elegance, with GraceAI.</p>
               </div>
             </div>
 
