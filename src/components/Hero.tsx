@@ -29,11 +29,18 @@ export const Hero = () => {
                 </span>
               </h1>
               
-              <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
-                Like how grace notes frame silence, GraceAI frames your musical journey. 
-                Record your practice sessions, get instant AI-powered feedback on accuracy, 
-                timing, and rhythm. Transform how you learn music with precision and elegance.
-              </p>
+              <div className="space-y-4">
+                <p className="text-xl text-muted-foreground leading-relaxed max-w-lg">
+                  Like how grace notes frame silence, GraceAI frames your musical journey.
+                </p>
+                <p className="text-lg text-muted-foreground/80 leading-relaxed max-w-lg">
+                  Record your practice sessions, get instant AI-powered feedback on accuracy, 
+                  timing, and rhythm.
+                </p>
+                <p className="text-lg text-muted-foreground/80 leading-relaxed max-w-lg">
+                  Transform how you learn music with precision and elegance.
+                </p>
+              </div>
             </div>
 
             <div className="flex flex-wrap gap-4">
