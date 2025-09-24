@@ -5,12 +5,9 @@ import { useState } from "react";
 import graceaiPractice from "@/assets/graceai-practice-screen.png";
 import graceaiHome from "@/assets/graceai-home-screen.png";
 import graceaiAnalytics from "@/assets/graceai-analytics-screen.png";
-
 export const Hero = () => {
   const [showWaitlist, setShowWaitlist] = useState(false);
-
-  return (
-    <section className="min-h-screen bg-gradient-dark relative overflow-hidden">
+  return <section className="min-h-screen bg-gradient-dark relative overflow-hidden">
       {/* Animated glow effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-primary/20 rounded-full blur-3xl animate-pulse"></div>
@@ -37,9 +34,7 @@ export const Hero = () => {
                   Record your practice sessions, get instant AI-powered feedback on accuracy, 
                   timing, and rhythm.
                 </p>
-                <p className="text-lg text-muted-foreground/80 leading-relaxed max-w-lg">
-                  Transform how you learn music with precision and elegance.
-                </p>
+                <p className="text-lg text-muted-foreground/80 leading-relaxed max-w-lg">Transform how you learn music with precision and elegance, with GraceAI</p>
               </div>
             </div>
 
@@ -83,11 +78,7 @@ export const Hero = () => {
               {/* Practice Screen */}
               <div className="relative transform hover:scale-105 transition-smooth">
                 <div className="relative rounded-2xl overflow-hidden shadow-elegant">
-                  <img 
-                    src={graceaiPractice} 
-                    alt="GraceAI Practice Screen" 
-                    className="w-full h-auto"
-                  />
+                  <img src={graceaiPractice} alt="GraceAI Practice Screen" className="w-full h-auto" />
                   <div className="absolute inset-0 bg-gradient-primary/10"></div>
                 </div>
                 <div className="absolute -top-2 -right-2 w-6 h-6 bg-gradient-primary rounded-full shadow-glow-primary animate-pulse"></div>
@@ -96,11 +87,7 @@ export const Hero = () => {
               {/* Home Screen */}
               <div className="relative transform hover:scale-105 transition-smooth md:mt-8">
                 <div className="relative rounded-2xl overflow-hidden shadow-elegant">
-                  <img 
-                    src={graceaiHome} 
-                    alt="GraceAI Home Dashboard" 
-                    className="w-full h-auto"
-                  />
+                  <img src={graceaiHome} alt="GraceAI Home Dashboard" className="w-full h-auto" />
                   <div className="absolute inset-0 bg-gradient-primary/10"></div>
                 </div>
                 <div className="absolute -top-2 -left-2 w-8 h-8 bg-gradient-glow rounded-full shadow-glow-secondary animate-bounce"></div>
@@ -109,11 +96,7 @@ export const Hero = () => {
               {/* Analytics Screen */}
               <div className="relative transform hover:scale-105 transition-smooth">
                 <div className="relative rounded-2xl overflow-hidden shadow-elegant">
-                  <img 
-                    src={graceaiAnalytics} 
-                    alt="GraceAI Analytics Screen" 
-                    className="w-full h-auto"
-                  />
+                  <img src={graceaiAnalytics} alt="GraceAI Analytics Screen" className="w-full h-auto" />
                   <div className="absolute inset-0 bg-gradient-primary/10"></div>
                 </div>
                 <div className="absolute -bottom-2 -right-2 w-6 h-6 bg-gradient-primary rounded-full shadow-glow-primary animate-pulse"></div>
@@ -128,6 +111,5 @@ export const Hero = () => {
       </div>
       
       <WaitlistModal open={showWaitlist} onOpenChange={setShowWaitlist} />
-    </section>
-  );
+    </section>;
 };
