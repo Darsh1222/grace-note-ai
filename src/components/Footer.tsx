@@ -2,9 +2,9 @@ import graceaiLogo from "@/assets/graceai-logo.png";
 export const Footer = () => {
   return <footer className="bg-background border-t border-border/50 py-12">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
-          <div className="space-y-4">
+          <div className="space-y-4 md:col-span-2">
             <div className="flex items-center space-x-2">
               <img src={graceaiLogo} alt="GraceAI Logo" className="w-8 h-8" />
               <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
@@ -22,6 +22,15 @@ export const Footer = () => {
             <div className="space-y-2 text-sm">
               <a href="/privacy-policy" className="block text-muted-foreground hover:text-foreground transition-smooth">Privacy Policy</a>
               <a href="/terms-of-service" className="block text-muted-foreground hover:text-foreground transition-smooth">Terms of Service</a>
+            </div>
+          </div>
+
+          {/* Support & About */}
+          <div className="space-y-4">
+            <h3 className="font-semibold text-foreground">Connect</h3>
+            <div className="space-y-2 text-sm">
+              <a href="mailto:darsh@graceai.music" className="block text-muted-foreground hover:text-foreground transition-smooth">Support</a>
+              <a href="https://darshsenthil.ai" target="_blank" rel="noopener noreferrer" className="block text-muted-foreground hover:text-foreground transition-smooth">About</a>
             </div>
           </div>
         </div>
