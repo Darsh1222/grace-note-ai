@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import graceaiLogo from "@/assets/graceai-logo.png";
 
 export const Navigation = () => {
@@ -6,12 +7,12 @@ export const Navigation = () => {
     <nav className="fixed top-0 w-full bg-background/80 backdrop-blur-md border-b border-border z-50">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-2 cursor-pointer">
             <img src={graceaiLogo} alt="GraceAI Logo" className="w-8 h-8" />
             <span className="text-xl font-bold bg-gradient-primary bg-clip-text text-transparent">
               GraceAI
             </span>
-          </div>
+          </Link>
           
           <div className="hidden md:flex items-center space-x-8">
             <a 
