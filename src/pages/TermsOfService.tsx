@@ -42,7 +42,18 @@ const TermsOfService = () => {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-foreground mb-4">4. No Guarantees</h2>
+            <h2 className="text-2xl font-semibold text-foreground mb-4">4. In-App Purchases & Pricing</h2>
+            <p className="text-muted-foreground mb-4">
+              GraceAI may offer optional in-app purchases in the future to unlock premium features, content, or services. 
+              Pricing and features are subject to change and will be clearly communicated within the app before any charges occur.
+            </p>
+            <p className="text-muted-foreground mb-4">
+              By using the app, you acknowledge that some features may require payment and agree to any applicable billing terms at the time of purchase.
+            </p>
+          </section>
+
+          <section className="mb-8">
+            <h2 className="text-2xl font-semibold text-foreground mb-4">5. No Guarantees</h2>
             <p className="text-muted-foreground mb-4">
               GraceAI is an educational tool. While we strive for accurate feedback and performance tracking, 
               we do not guarantee accuracy, outcomes, or musical improvement.
@@ -50,7 +61,7 @@ const TermsOfService = () => {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-foreground mb-4">5. Limitation of Liability</h2>
+            <h2 className="text-2xl font-semibold text-foreground mb-4">6. Limitation of Liability</h2>
             <p className="text-muted-foreground mb-4">We are not responsible for:</p>
             <ul className="list-disc list-inside text-muted-foreground space-y-2">
               <li>Loss of data</li>
@@ -62,21 +73,21 @@ const TermsOfService = () => {
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-foreground mb-4">6. Privacy</h2>
+            <h2 className="text-2xl font-semibold text-foreground mb-4">7. Privacy</h2>
             <p className="text-muted-foreground mb-4">
               We respect your data. Please review our <a href="/privacy-policy" className="text-primary hover:underline">Privacy Policy</a> for more information.
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-foreground mb-4">7. Changes</h2>
+            <h2 className="text-2xl font-semibold text-foreground mb-4">8. Changes</h2>
             <p className="text-muted-foreground mb-4">
               We may update these terms as GraceAI grows. Continued use of the service implies acceptance of the updated terms.
             </p>
           </section>
 
           <section className="mb-8">
-            <h2 className="text-2xl font-semibold text-foreground mb-4">8. Contact</h2>
+            <h2 className="text-2xl font-semibold text-foreground mb-4">9. Contact</h2>
             <p className="text-muted-foreground">
               For any questions, email us at: <a href="mailto:darsh@graceai.music" className="text-primary hover:underline">darsh@graceai.music</a>
             </p>
