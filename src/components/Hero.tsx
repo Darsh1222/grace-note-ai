@@ -45,7 +45,7 @@ export const Hero = () => {
               </Button>
               <Button variant="glow" size="xl" onClick={() => setShowWaitlist(true)}>
                 <Music className="w-5 h-5" />
-                Join Waitlist
+                Join the Evolved Musicians
               </Button>
             </div>
 

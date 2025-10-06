@@ -107,12 +107,11 @@ export const WaitlistModal = ({ open, onOpenChange }: WaitlistModalProps) => {
           </div>
           
           <DialogTitle className="text-center text-2xl bg-gradient-primary bg-clip-text text-transparent">
-            Join the GraceAI Waitlist
+            Join the Evolved Musicians
           </DialogTitle>
           
           <p className="text-center text-muted-foreground">
-            Be the first to experience AI-powered music practice analysis. 
-            Get early access when we launch!
+            Join to get access to free features, exclusive resources, and early access to future versions!
           </p>
         </DialogHeader>
 
@@ -163,7 +162,7 @@ export const WaitlistModal = ({ open, onOpenChange }: WaitlistModalProps) => {
               className="flex-1"
               disabled={isSubmitting}
             >
-              {isSubmitting ? "Joining..." : "Join Waitlist"}
+              {isSubmitting ? "Joining..." : "Join the Evolved Musicians"}
             </Button>
           </div>
         </form>

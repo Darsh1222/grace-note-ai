@@ -40,7 +40,7 @@ export const DownloadSection = () => {
                 </Button>
                 <Button variant="glow" size="xl">
                   <Download className="w-5 h-5" />
-                  Join Waitlist
+                  Join the Evolved Musicians
                 </Button>
               </div>
 
