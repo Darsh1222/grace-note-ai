@@ -30,7 +30,7 @@ export const Footer = () => {
             <h3 className="font-semibold text-foreground">About the Developer</h3>
             <div className="space-y-2 text-sm">
               <a href="mailto:darsh@graceai.music" className="block text-muted-foreground hover:text-foreground transition-smooth">darsh@graceai.music</a>
-              <a href="https://darshsenthil.ai" target="_blank" rel="noopener noreferrer" className="block text-muted-foreground hover:text-foreground transition-smooth">darshsenthil.ai</a>
+              <a href="https://darshsenthil.ai" target="_blank" rel="noopener noreferrer" className="block text-muted-foreground hover:text-foreground transition-smooth">About the Developer</a>
             </div>
           </div>
         </div>
