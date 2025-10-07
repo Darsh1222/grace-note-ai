@@ -45,6 +45,16 @@ export const Navigation = () => {
             >
               Download
             </a>
+            <a 
+              href="#about-developer" 
+              className="text-muted-foreground hover:text-foreground transition-smooth"
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById('about-developer')?.scrollIntoView({ behavior: 'smooth' });
+              }}
+            >
+              About the Developer
+            </a>
           </div>
 
           <div className="flex items-center space-x-4">
