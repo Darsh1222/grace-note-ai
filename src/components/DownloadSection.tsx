@@ -34,9 +34,15 @@ export const DownloadSection = () => {
 
               {/* Download buttons */}
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <Button variant="hero" size="xl" className="group" disabled>
-                  <Apple className="w-6 h-6 group-hover:scale-110 transition-smooth" />
-                  Download for iOS
+                <Button variant="hero" size="xl" className="group" asChild>
+                  <a 
+                    href="https://apps.apple.com/us/app/graceai-master-your-music/id6753151596"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <Apple className="w-6 h-6 group-hover:scale-110 transition-smooth" />
+                    Download for iOS
+                  </a>
                 </Button>
                 <Button variant="glow" size="xl">
                   <Download className="w-5 h-5" />

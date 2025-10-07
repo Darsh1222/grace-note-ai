@@ -23,7 +23,7 @@ export const Navigation = () => {
                 document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              Features
+              What's Inside
             </a>
             <a 
               href="#how-it-works" 
@@ -33,7 +33,7 @@ export const Navigation = () => {
                 document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              How It Works
+              Getting Started
             </a>
             <a 
               href="#download" 
@@ -48,8 +48,18 @@ export const Navigation = () => {
           </div>
 
           <div className="flex items-center space-x-4">
-            <Button variant="glow" size="sm">
-              Coming Soon
+            <Button 
+              variant="glow" 
+              size="sm"
+              asChild
+            >
+              <a 
+                href="https://apps.apple.com/us/app/graceai-master-your-music/id6753151596"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Download Now
+              </a>
             </Button>
           </div>
         </div>

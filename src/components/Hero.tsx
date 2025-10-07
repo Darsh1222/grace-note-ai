@@ -39,9 +39,15 @@ export const Hero = () => {
             </div>
 
             <div className="flex flex-wrap gap-4">
-              <Button variant="hero" size="xl" className="group" disabled>
-                <Music className="w-5 h-5 group-hover:animate-pulse" />
-                Download for iOS
+              <Button variant="hero" size="xl" className="group" asChild>
+                <a 
+                  href="https://apps.apple.com/us/app/graceai-master-your-music/id6753151596"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Music className="w-5 h-5 group-hover:animate-pulse" />
+                  Download for iOS
+                </a>
               </Button>
               <Button variant="glow" size="xl" onClick={() => setShowWaitlist(true)}>
                 <Music className="w-5 h-5" />
