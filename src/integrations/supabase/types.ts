@@ -67,6 +67,42 @@ export type Database = {
           },
         ]
       }
+      feedback: {
+        Row: {
+          app_version: string | null
+          created_at: string | null
+          email: string
+          id: string
+          message: string
+          name: string
+          status: string | null
+          timestamp: string | null
+          updated_at: string | null
+        }
+        Insert: {
+          app_version?: string | null
+          created_at?: string | null
+          email: string
+          id?: string
+          message: string
+          name: string
+          status?: string | null
+          timestamp?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          app_version?: string | null
+          created_at?: string | null
+          email?: string
+          id?: string
+          message?: string
+          name?: string
+          status?: string | null
+          timestamp?: string | null
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
       practice_sessions: {
         Row: {
           accuracy: number | null
@@ -126,31 +162,49 @@ export type Database = {
       }
       profiles: {
         Row: {
+          average_accuracy: number | null
+          best_accuracy: number | null
           created_at: string | null
+          current_streak: number | null
           email: string | null
           id: string
           instruments: Json | null
           name: string | null
           skill_level: string | null
+          total_practice_time: number | null
+          total_sessions: number | null
           updated_at: string | null
+          user_id: string | null
         }
         Insert: {
+          average_accuracy?: number | null
+          best_accuracy?: number | null
           created_at?: string | null
-          email?: string | null
-          id: string
-          instruments?: Json | null
-          name?: string | null
-          skill_level?: string | null
-          updated_at?: string | null
-        }
-        Update: {
-          created_at?: string | null
+          current_streak?: number | null
           email?: string | null
           id?: string
           instruments?: Json | null
           name?: string | null
           skill_level?: string | null
+          total_practice_time?: number | null
+          total_sessions?: number | null
           updated_at?: string | null
+          user_id?: string | null
+        }
+        Update: {
+          average_accuracy?: number | null
+          best_accuracy?: number | null
+          created_at?: string | null
+          current_streak?: number | null
+          email?: string | null
+          id?: string
+          instruments?: Json | null
+          name?: string | null
+          skill_level?: string | null
+          total_practice_time?: number | null
+          total_sessions?: number | null
+          updated_at?: string | null
+          user_id?: string | null
         }
         Relationships: []
       }
@@ -261,6 +315,42 @@ export type Database = {
       }
     }
     Views: {
+      feedback_summary: {
+        Row: {
+          app_version: string | null
+          created_at: string | null
+          email: string | null
+          id: string | null
+          message_preview: string | null
+          name: string | null
+          status: string | null
+          timestamp: string | null
+          updated_at: string | null
+        }
+        Insert: {
+          app_version?: string | null
+          created_at?: string | null
+          email?: string | null
+          id?: string | null
+          message_preview?: never
+          name?: string | null
+          status?: string | null
+          timestamp?: string | null
+          updated_at?: string | null
+        }
+        Update: {
+          app_version?: string | null
+          created_at?: string | null
+          email?: string | null
+          id?: string | null
+          message_preview?: never
+          name?: string | null
+          status?: string | null
+          timestamp?: string | null
+          updated_at?: string | null
+        }
+        Relationships: []
+      }
       user_sessions: {
         Row: {
           accuracy: number | null
