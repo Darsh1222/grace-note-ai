@@ -24,7 +24,7 @@ const formSchema = z.object({
   nonMarketingConsent: z.boolean().refine((val) => val === true, {
     message: "You must consent to receive non-marketing messages",
   }),
-  marketingConsent: z.boolean().optional(),
+  
 });
 
 type FormValues = z.infer<typeof formSchema>;
@@ -40,7 +40,7 @@ const RoofingRequest = () => {
       phone: "",
       email: "",
       nonMarketingConsent: false,
-      marketingConsent: false,
+      
     },
   });
 
@@ -151,30 +151,6 @@ const RoofingRequest = () => {
                     &amp; data rates may apply. Text HELP for assistance, reply STOP to opt out.
                   </div>
                   <FormMessage />
-                </FormItem>
-              )}
-            />
-
-            {/* Marketing consent checkbox */}
-            <FormField
-              control={form.control}
-              name="marketingConsent"
-              render={({ field }) => (
-                <FormItem className="flex flex-row items-start space-x-3 space-y-0 py-2">
-                  <FormControl>
-                    <Checkbox
-                      checked={field.value}
-                      onCheckedChange={field.onChange}
-                      className="mt-1 border-gray-400 data-[state=checked]:bg-green-500 data-[state=checked]:border-green-500"
-                    />
-                  </FormControl>
-                  <div className="leading-relaxed text-sm text-gray-700">
-                    By checking this box, I consent to receive marketing and promotional messages
-                    including special offers, discounts, new product updates among others from{" "}
-                    <strong className="text-gray-900">GRACEAI INNOVATIONS LLC</strong> at the phone
-                    number provided. Message frequency varies based on your interaction with us.
-                    Message &amp; data rates may apply. Text HELP for assistance, reply STOP to opt out.
-                  </div>
                 </FormItem>
               )}
             />
