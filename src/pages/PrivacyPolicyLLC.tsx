@@ -65,6 +65,7 @@ const PrivacyPolicyLLC = () => {
         </Section>
 
         <Section title="4. Mobile Information Sharing">
+          <p className="mb-3">Mobile information will not be shared with third parties or affiliates for marketing or promotional purposes.</p>
           <p className="mb-3">No mobile information will be shared with third parties or affiliates for marketing or promotional purposes.</p>
           <p>All categories exclude text messaging originator opt-in data and consent; this information will not be shared with any third parties.</p>
         </Section>
