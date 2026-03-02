@@ -147,8 +147,8 @@ const RoofingRequest = () => {
                   <div className="leading-relaxed text-sm text-gray-700">
                     By checking this box and providing my mobile number, I agree to receive informational text messages from{" "}
                     <strong className="text-gray-900">GraceAI Innovations LLC</strong> about my
-                    roofing request, including scheduling, service updates, and follow-ups. Message
-                    frequency varies. Message &amp; data rates may apply. Reply STOP to opt out or
+                    roofing request, including appointment confirmations, scheduling updates, service reminders, and follow-ups. Message
+                    frequency varies. Msg &amp; data rates may apply. Reply STOP to opt out or
                     HELP for assistance.
                   </div>
                   <FormMessage />
