@@ -69,7 +69,7 @@ const RoofingRequest = () => {
           <p className="text-gray-600 text-lg mb-1">
             <a href="tel:4103020033" className="hover:underline">410-302-0033</a>
           </p>
-          <p className="text-gray-500">Request roofing inspection or service</p>
+          <p className="text-gray-500">Request a roofing inspection or service appointment</p>
         </div>
 
         {/* Form */}
