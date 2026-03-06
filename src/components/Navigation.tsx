@@ -55,6 +55,12 @@ export const Navigation = () => {
             >
               About the Developer
             </a>
+            <Link 
+              to="/roofing-request" 
+              className="text-muted-foreground hover:text-foreground transition-smooth"
+            >
+              Roofing Services
+            </Link>
           </div>
 
           <div className="flex items-center space-x-4">
