@@ -53,7 +53,7 @@ export const Navigation = () => {
                 document.getElementById('about-developer')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              About the Developer
+              About the<br />Developer
             </a>
             <Link 
               to="/roofing-request" 
