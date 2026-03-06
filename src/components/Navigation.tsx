@@ -23,7 +23,7 @@ export const Navigation = () => {
                 document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              What's Inside
+              What's<br />Inside
             </a>
             <a 
               href="#how-it-works" 
