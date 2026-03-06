@@ -59,7 +59,7 @@ export const Navigation = () => {
               to="/roofing-request" 
               className="text-muted-foreground hover:text-foreground transition-smooth"
             >
-              Roofing Services
+              Roofing<br />Services
             </Link>
           </div>
 
