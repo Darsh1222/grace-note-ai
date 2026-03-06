@@ -14,7 +14,7 @@ export const Navigation = () => {
             </span>
           </Link>
           
-          <div className="hidden md:flex items-center space-x-6 text-sm">
+          <div className="hidden md:flex items-center space-x-6 text-sm text-center">
             <a 
               href="#features" 
               className="text-muted-foreground hover:text-foreground transition-smooth"
@@ -23,7 +23,7 @@ export const Navigation = () => {
                 document.getElementById('features')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              What's Inside
+              What's<br />Inside
             </a>
             <a 
               href="#how-it-works" 
@@ -33,7 +33,7 @@ export const Navigation = () => {
                 document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              Getting Started
+              Getting<br />Started
             </a>
             <a 
               href="#download" 
@@ -53,13 +53,13 @@ export const Navigation = () => {
                 document.getElementById('about-developer')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              About the Developer
+              About the<br />Developer
             </a>
             <Link 
               to="/roofing-request" 
               className="text-muted-foreground hover:text-foreground transition-smooth"
             >
-              Roofing Services
+              Roofing<br />Services
             </Link>
           </div>
 
