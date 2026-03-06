@@ -33,7 +33,7 @@ export const Navigation = () => {
                 document.getElementById('how-it-works')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              Getting Started
+              Getting<br />Started
             </a>
             <a 
               href="#download" 
