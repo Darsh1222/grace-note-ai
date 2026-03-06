@@ -14,7 +14,7 @@ export const Navigation = () => {
             </span>
           </Link>
           
-          <div className="hidden md:flex items-center space-x-6 text-sm">
+          <div className="hidden md:flex items-center space-x-6 text-sm text-center">
             <a 
               href="#features" 
               className="text-muted-foreground hover:text-foreground transition-smooth"
