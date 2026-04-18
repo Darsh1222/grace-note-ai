@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300&family=Inter:wght@300;400;500;600&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -78,3 +80,101 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* =========================================================
+   Graduation Invite — scoped styles for /graduation routes
+   Wrapped in .grad-scope so it doesn't leak into the rest
+   of the GraceAI site.
+   ========================================================= */
+.grad-scope {
+  --grad-background: 222 30% 6%;
+  --grad-foreground: 40 30% 92%;
+  --grad-card: 222 25% 9%;
+  --grad-border: 42 30% 25%;
+  --grad-input: 222 20% 14%;
+  --grad-secondary: 222 20% 14%;
+  --grad-muted-foreground: 40 12% 65%;
+  --grad-primary-foreground: 222 40% 8%;
+  --grad-gold: 42 55% 62%;
+  --grad-gold-bright: 45 80% 70%;
+  --grad-gold-deep: 38 60% 45%;
+  --grad-gradient-gold: linear-gradient(135deg, hsl(38 60% 45%), hsl(45 80% 70%), hsl(38 60% 45%));
+  --grad-gradient-night: radial-gradient(ellipse at top, hsl(222 35% 12%), hsl(222 40% 5%));
+  --grad-shadow-elegant: 0 30px 80px -20px hsl(222 50% 2% / 0.6);
+  --grad-shadow-gold: 0 10px 40px -10px hsl(42 55% 62% / 0.35);
+
+  font-family: 'Inter', system-ui, sans-serif;
+  color: hsl(var(--grad-foreground));
+}
+.grad-scope .font-display { font-family: 'Cormorant Garamond', serif; }
+.grad-scope .font-sans { font-family: 'Inter', system-ui, sans-serif; }
+.grad-scope .text-gold { color: hsl(var(--grad-gold)); }
+.grad-scope .hover\:text-gold-bright:hover { color: hsl(var(--grad-gold-bright)); }
+.grad-scope .bg-gradient-gold { background: var(--grad-gradient-gold); }
+.grad-scope .text-gradient-gold {
+  background: var(--grad-gradient-gold);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+}
+.grad-scope .bg-night { background: var(--grad-gradient-night); }
+.grad-scope .text-foreground { color: hsl(var(--grad-foreground)); }
+.grad-scope .text-muted-foreground { color: hsl(var(--grad-muted-foreground)); }
+.grad-scope .text-primary-foreground { color: hsl(var(--grad-primary-foreground)); }
+.grad-scope .bg-card\/40 { background-color: hsl(var(--grad-card) / 0.4); }
+.grad-scope .bg-card\/20 { background-color: hsl(var(--grad-card) / 0.2); }
+.grad-scope .bg-card\/60 { background-color: hsl(var(--grad-card) / 0.6); }
+.grad-scope .bg-card { background-color: hsl(var(--grad-card)); }
+.grad-scope .bg-secondary\/30 { background-color: hsl(var(--grad-secondary) / 0.3); }
+.grad-scope .bg-secondary { background-color: hsl(var(--grad-secondary)); }
+.grad-scope .bg-input\/60 { background-color: hsl(var(--grad-input) / 0.6); }
+.grad-scope .bg-background { background-color: hsl(var(--grad-background)); }
+.grad-scope .from-background\/60 { --tw-gradient-from: hsl(var(--grad-background) / 0.6) var(--tw-gradient-from-position); --tw-gradient-to: hsl(var(--grad-background) / 0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+.grad-scope .via-background\/40 { --tw-gradient-to: hsl(var(--grad-background) / 0)  var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), hsl(var(--grad-background) / 0.4) var(--tw-gradient-via-position), var(--tw-gradient-to); }
+.grad-scope .to-background { --tw-gradient-to: hsl(var(--grad-background)) var(--tw-gradient-to-position); }
+.grad-scope .from-background\/95 { --tw-gradient-from: hsl(var(--grad-background) / 0.95) var(--tw-gradient-from-position); --tw-gradient-to: hsl(var(--grad-background) / 0) var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to); }
+.grad-scope .via-background\/30 { --tw-gradient-to: hsl(var(--grad-background) / 0)  var(--tw-gradient-to-position); --tw-gradient-stops: var(--tw-gradient-from), hsl(var(--grad-background) / 0.3) var(--tw-gradient-via-position), var(--tw-gradient-to); }
+.grad-scope .border-border\/30 { border-color: hsl(var(--grad-border) / 0.3); }
+.grad-scope .border-border\/40 { border-color: hsl(var(--grad-border) / 0.4); }
+.grad-scope .border-border\/50 { border-color: hsl(var(--grad-border) / 0.5); }
+.grad-scope .divide-border\/40 > :not([hidden]) ~ :not([hidden]) { border-color: hsl(var(--grad-border) / 0.4); }
+.grad-scope .hover\:border-gold:hover { border-color: hsl(var(--grad-gold)); }
+.grad-scope .hover\:border-gold\/50:hover { border-color: hsl(var(--grad-gold) / 0.5); }
+.grad-scope .hover\:border-gold\/60:hover { border-color: hsl(var(--grad-gold) / 0.6); }
+.grad-scope .group-hover\:border-gold\/50 { border-color: hsl(var(--grad-gold) / 0); transition: border-color .3s; }
+.grad-scope .group:hover .group-hover\:border-gold\/50 { border-color: hsl(var(--grad-gold) / 0.5); }
+.grad-scope .border-gold\/30 { border-color: hsl(var(--grad-gold) / 0.3); }
+.grad-scope .focus-visible\:border-gold:focus-visible { border-color: hsl(var(--grad-gold)); }
+.grad-scope .focus-visible\:ring-gold:focus-visible { --tw-ring-color: hsl(var(--grad-gold)); }
+.grad-scope .from-gold,
+.grad-scope .to-gold { --tw-gradient-stops: hsl(var(--grad-gold)); }
+.grad-scope .from-transparent { --tw-gradient-from: transparent var(--tw-gradient-from-position); }
+.grad-scope .to-transparent { --tw-gradient-to: transparent var(--tw-gradient-to-position); }
+.grad-scope .via-gold\/60 { --tw-gradient-stops: var(--tw-gradient-from), hsl(var(--grad-gold) / 0.6) var(--tw-gradient-via-position), var(--tw-gradient-to); }
+.grad-scope .shadow-elegant { box-shadow: var(--grad-shadow-elegant); }
+.grad-scope .shadow-gold { box-shadow: var(--grad-shadow-gold); }
+.grad-scope .tracking-luxe { letter-spacing: 0.3em; }
+.grad-scope .text-muted-foreground\/60 { color: hsl(var(--grad-muted-foreground) / 0.6); }
+.grad-scope .text-muted-foreground\/40 { color: hsl(var(--grad-muted-foreground) / 0.4); }
+.grad-scope .text-muted-foreground\/70 { color: hsl(var(--grad-muted-foreground) / 0.7); }
+.grad-scope .text-foreground\/70 { color: hsl(var(--grad-foreground) / 0.7); }
+.grad-scope .text-foreground\/80 { color: hsl(var(--grad-foreground) / 0.8); }
+.grad-scope .text-foreground\/90 { color: hsl(var(--grad-foreground) / 0.9); }
+.grad-scope .text-gold\/60 { color: hsl(var(--grad-gold) / 0.6); }
+
+@keyframes grad-shimmer {
+  0%, 100% { opacity: 0.4; transform: translateY(0); }
+  50% { opacity: 1; transform: translateY(-4px); }
+}
+@keyframes grad-fade-up {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+@keyframes grad-glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px hsl(var(--grad-gold) / 0.2); }
+  50% { box-shadow: 0 0 40px hsl(var(--grad-gold) / 0.5); }
+}
+.grad-scope .animate-shimmer { animation: grad-shimmer 3s ease-in-out infinite; }
+.grad-scope .animate-fade-up { animation: grad-fade-up 0.9s cubic-bezier(0.22, 1, 0.36, 1) both; }
+.grad-scope .animate-glow { animation: grad-glow-pulse 3s ease-in-out infinite; }

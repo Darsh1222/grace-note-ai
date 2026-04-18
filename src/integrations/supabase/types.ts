@@ -208,6 +208,30 @@ export type Database = {
         }
         Relationships: []
       }
+      rsvps: {
+        Row: {
+          attending: boolean
+          created_at: string
+          guest_count: number
+          guest_name: string
+          id: string
+        }
+        Insert: {
+          attending: boolean
+          created_at?: string
+          guest_count?: number
+          guest_name: string
+          id?: string
+        }
+        Update: {
+          attending?: boolean
+          created_at?: string
+          guest_count?: number
+          guest_name?: string
+          id?: string
+        }
+        Relationships: []
+      }
       sessions: {
         Row: {
           accuracy: number
