@@ -14,6 +14,30 @@ export type Database = {
   }
   public: {
     Tables: {
+      age_comments: {
+        Row: {
+          age: number
+          comment: string
+          commenter_name: string | null
+          created_at: string
+          id: string
+        }
+        Insert: {
+          age: number
+          comment: string
+          commenter_name?: string | null
+          created_at?: string
+          id?: string
+        }
+        Update: {
+          age?: number
+          comment?: string
+          commenter_name?: string | null
+          created_at?: string
+          id?: string
+        }
+        Relationships: []
+      }
       analyses: {
         Row: {
           accuracy_score: number | null
@@ -100,6 +124,30 @@ export type Database = {
           status?: string | null
           timestamp?: string | null
           updated_at?: string | null
+        }
+        Relationships: []
+      }
+      guest_photos: {
+        Row: {
+          created_at: string
+          id: string
+          note: string | null
+          storage_path: string
+          uploader_name: string | null
+        }
+        Insert: {
+          created_at?: string
+          id?: string
+          note?: string | null
+          storage_path: string
+          uploader_name?: string | null
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          note?: string | null
+          storage_path?: string
+          uploader_name?: string | null
         }
         Relationships: []
       }
