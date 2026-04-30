@@ -151,9 +151,9 @@ export default function AiShadowOperating() {
             For creators building AI digital products
           </span>
           <h1 className="mt-8 text-5xl md:text-7xl font-semibold leading-[1.05] tracking-tight">
-            Take advantage
+            Take Advantage
             <br />
-            of your audience.
+            of Your Audience With AI.
           </h1>
           <p className="mt-6 text-white/70 max-w-2xl mx-auto text-base md:text-lg">
             AI Shadow Operating is the business model behind the next wave of one-person
