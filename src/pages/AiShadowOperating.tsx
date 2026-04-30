@@ -10,6 +10,7 @@ import {
   Repeat,
   Instagram,
 } from "lucide-react";
+import heroBg from "@/assets/shadow-hero-bg.jpg";
 
 const benefits = [
   {
@@ -96,19 +97,26 @@ export default function AiShadowOperating() {
       </header>
 
       {/* HERO */}
-      <section className="relative pt-40 pb-24 overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(239,68,68,0.18),_transparent_60%)]" />
-        <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent,_#0a0a0a)]" />
+      <section className="relative pt-40 pb-32 overflow-hidden">
+        <img
+          src={heroBg}
+          alt=""
+          width={1920}
+          height={1088}
+          className="absolute inset-0 w-full h-full object-cover opacity-90 pointer-events-none"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-[#0a0a0a]" />
 
         <div className="relative container mx-auto px-6 text-center">
           <h1 className="text-5xl md:text-7xl font-semibold leading-[1.05] tracking-tight">
-            Run a business
+            Take advantage
             <br />
-            in the background.
+            of your audience.
           </h1>
           <p className="mt-6 text-white/70 max-w-2xl mx-auto text-base md:text-lg">
             AI Shadow Operating is a business model where AI agents quietly run the
-            operational layer of a company — letting a small team ship like a big one.
+            operational layer of a company — so a small team can turn attention into
+            output, and output into a real business.
           </p>
         </div>
       </section>
