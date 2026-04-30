@@ -63,7 +63,7 @@ const TermsOfServiceLLC = () => {
         </Section>
 
         <div className="pt-8 text-center">
-          <Link to="/roofing-request" className="text-blue-600 hover:underline text-sm">← Back to Form</Link>
+          <Link to="/" className="text-blue-600 hover:underline text-sm">← Back to Home</Link>
         </div>
       </main>
     </div>
