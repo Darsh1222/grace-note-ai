@@ -1,80 +1,74 @@
 import { Link } from "react-router-dom";
 import {
   Eye,
-  Shield,
-  BarChart3,
-  Lock,
   Network,
-  AlertTriangle,
-  Users,
-  FileWarning,
-  GitBranch,
-  Bot,
+  BarChart3,
+  Workflow,
+  Layers,
+  Sparkles,
+  Gauge,
+  Repeat,
+  Instagram,
 } from "lucide-react";
 
 const benefits = [
   {
-    icon: Eye,
-    title: "Continuous Discovery",
-    desc: "Identify every unsanctioned AI tool, copilot, and autonomous agent the moment it appears across SaaS, browsers, and code.",
+    icon: Gauge,
+    title: "Leverage Without Headcount",
+    desc: "Scale output without scaling org charts. AI agents handle the repeatable layer of the business so people focus on judgment and creativity.",
   },
   {
-    icon: Shield,
-    title: "Policy-Aware Guardrails",
-    desc: "Apply granular controls to what agents can read, write, and execute — without blocking productive use.",
+    icon: Repeat,
+    title: "Always-On Operations",
+    desc: "Workflows run in the background — overnight, on weekends, between meetings. The business compounds while the team sleeps.",
   },
   {
-    icon: BarChart3,
-    title: "Risk Intelligence",
-    desc: "Quantify exposure across data leakage, model misuse, and runaway automation in a single, explainable score.",
+    icon: Layers,
+    title: "Composable by Design",
+    desc: "Each agent is a small, swappable unit. Stack them into bigger workflows, retire them when something better comes along.",
   },
   {
-    icon: Lock,
-    title: "Audit-Ready by Default",
-    desc: "Every prompt, action, and decision is logged and exportable for SOC 2, ISO 27001, NIST AI RMF, and the EU AI Act.",
+    icon: Sparkles,
+    title: "Founder-Level Speed",
+    desc: "Ship, iterate, and ship again at the pace of one person with infinite assistants — without giving up the polish of a real team.",
   },
 ];
 
-const risks = [
+const principles = [
   {
-    icon: FileWarning,
-    title: "Sensitive Data Leakage",
-    desc: "Employees paste source code, customer records, and strategy docs into public LLMs — the Samsung 2023 incident is now a weekly occurrence at most large enterprises.",
+    icon: Eye,
+    title: "Run quiet, ship loud",
+    desc: "The operating layer stays invisible to customers. What they see is faster shipping, sharper craft, and replies that arrive before they expected one.",
   },
   {
-    icon: Bot,
-    title: "Unsupervised Autonomous Agents",
-    desc: "Agentic tools chain tool-calls, send emails, and modify systems with credentials no one inventoried. A single misaligned goal can cascade across production.",
+    icon: Workflow,
+    title: "Workflows over headcount",
+    desc: "Before hiring, model the work as a workflow. Most operational roles in a modern business are a sequence of decisions and handoffs — exactly what agents are good at.",
   },
   {
-    icon: GitBranch,
-    title: "Untracked Model Sprawl",
-    desc: "Teams spin up fine-tunes, RAG pipelines, and MCP servers outside IT. Without a registry, there is no way to patch, retire, or evaluate them.",
-  },
-  {
-    icon: Users,
-    title: "Compliance & Legal Exposure",
-    desc: "Shadow AI usage routinely violates GDPR, HIPAA, the EU AI Act, and customer DPAs — long before legal or security ever hears about it.",
+    icon: Network,
+    title: "Humans on the edges, agents in the middle",
+    desc: "People set the strategy and approve the outputs that matter. Agents do the connective tissue — research, drafting, formatting, follow-up, scheduling.",
   },
 ];
 
 const pillars = [
   {
-    label: "Visibility",
-    title: "Map every AI agent in your enterprise",
-    desc: "From ChatGPT plugins to autonomous workflows, see the full graph of who's running what, where, and on which data — in real time. Discovery spans browsers, SaaS, code repos, and network telemetry so nothing operates in the dark.",
-    icon: Network,
+    label: "Build",
+    title: "Design the business as a system of agents",
+    desc: "Map every recurring task — content, support, ops, research, analytics. Each one becomes a small agent with a clear input, output, and owner. The org chart becomes a workflow chart.",
+    icon: Layers,
   },
   {
-    label: "Control",
-    title: "Govern autonomous actions before they run",
-    desc: "Set permission boundaries by team, system, and data class. Block risky tool calls automatically, route ambiguous ones for human approval, and let safe agents move at full speed.",
-    icon: Shield,
+    label: "Operate",
+    title: "Let the system run itself, mostly",
+    desc: "Agents trigger each other, pass work between tools, and escalate the few decisions that need a human. The founder steps in for taste, strategy, and the things that compound.",
+    icon: Workflow,
   },
   {
-    label: "Insight",
-    title: "Turn shadow signals into board-level metrics",
-    desc: "Translate raw agent telemetry into the KPIs leadership actually asks about: ROI, risk, adoption, and compliance posture — without requiring a data team to build the dashboards.",
+    label: "Compound",
+    title: "Improve the system, not just the output",
+    desc: "Every week the workflow gets sharper: a better prompt, a smarter handoff, one less manual step. The business gets faster and cheaper to run while output goes up.",
     icon: BarChart3,
   },
 ];
@@ -87,11 +81,13 @@ export default function AiShadowOperating() {
         <div className="container mx-auto px-6 h-16 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
             <div className="w-7 h-7 rounded-full bg-gradient-to-br from-orange-500 to-red-600 shadow-[0_0_20px_rgba(239,68,68,0.6)]" />
-            <span className="font-semibold tracking-wider text-sm">SHADOW.OPS</span>
+            <span className="font-semibold tracking-wider text-sm">
+              AI SHADOW OPS <span className="text-white/50 font-normal">by GraceAI</span>
+            </span>
           </Link>
           <nav className="hidden md:flex items-center gap-8 text-sm text-white/70">
             <a href="#what" className="hover:text-white transition">What it is</a>
-            <a href="#risks" className="hover:text-white transition">Risks</a>
+            <a href="#principles" className="hover:text-white transition">Principles</a>
             <a href="#model" className="hover:text-white transition">The model</a>
             <a href="#benefits" className="hover:text-white transition">Benefits</a>
             <Link to="/" className="hover:text-white transition">Back to GraceAI</Link>
@@ -101,23 +97,18 @@ export default function AiShadowOperating() {
 
       {/* HERO */}
       <section className="relative pt-40 pb-24 overflow-hidden">
-        {/* Subtle gradient backdrop instead of generated image */}
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(239,68,68,0.18),_transparent_60%)]" />
         <div className="absolute inset-0 bg-[linear-gradient(to_bottom,transparent,_#0a0a0a)]" />
 
         <div className="relative container mx-auto px-6 text-center">
-          <span className="inline-block text-xs tracking-widest text-white/70 border border-white/15 rounded-full px-4 py-1.5 backdrop-blur-sm">
-            An informational primer on the Shadow AI Operating model
-          </span>
-          <h1 className="mt-8 text-5xl md:text-7xl font-semibold leading-[1.05] tracking-tight">
-            Govern the AI agents
+          <h1 className="text-5xl md:text-7xl font-semibold leading-[1.05] tracking-tight">
+            Run a business
             <br />
-            already running your business
+            in the background.
           </h1>
           <p className="mt-6 text-white/70 max-w-2xl mx-auto text-base md:text-lg">
-            Shadow AI is the unsanctioned, unmonitored use of AI tools and autonomous agents
-            inside an organization. The Shadow AI Operating model is the emerging discipline
-            of bringing that activity into the light — without slowing it down.
+            AI Shadow Operating is a business model where AI agents quietly run the
+            operational layer of a company — letting a small team ship like a big one.
           </p>
         </div>
       </section>
@@ -126,43 +117,41 @@ export default function AiShadowOperating() {
       <section id="what" className="py-20 border-t border-white/5">
         <div className="container mx-auto px-6 grid md:grid-cols-2 gap-12">
           <div>
-            <p className="text-orange-500 text-sm font-medium mb-4">What is Shadow AI?</p>
+            <p className="text-orange-500 text-sm font-medium mb-4">What is AI Shadow Operating?</p>
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight leading-tight">
-              The AI your security team doesn't know about — yet.
+              A business that runs itself, with the founder in the room.
             </h2>
           </div>
           <div className="space-y-5 text-white/75 leading-relaxed">
             <p>
-              <span className="text-white font-medium">Shadow AI</span> describes the use of
-              generative tools, copilots, browser extensions, and autonomous agents that
-              operate outside official IT or security oversight. Employees adopt them to move
-              faster; the enterprise inherits the risk.
+              <span className="text-white font-medium">AI Shadow Operating</span> is a way of
+              building a company where the day-to-day work — research, content, ops, support,
+              analytics — runs through a layer of AI agents instead of a layer of hires.
             </p>
             <p>
-              Surveys from CSA, Gartner, and CIO.com place shadow AI usage at over{" "}
-              <span className="text-white font-medium">75% of knowledge workers</span>, while
-              fewer than 1 in 5 organizations claim a complete inventory of the agents touching
-              their data.
+              The "shadow" isn't hidden in a bad way. It's the part of the business customers
+              never see: the workflows that draft, schedule, format, follow up, and report. In
+              this model, that layer is mostly machines.
             </p>
             <p>
-              The <span className="text-white font-medium">Shadow AI Operating model</span> is
-              the response: a continuous loop of discover → assess → control → audit applied
-              specifically to non-deterministic, agentic systems.
+              The result is a small, sharp team operating with the surface area of a much
+              larger one — and a founder who can spend their time on the things that actually
+              compound.
             </p>
           </div>
         </div>
       </section>
 
-      {/* RISKS */}
-      <section id="risks" className="py-24 border-t border-white/5">
+      {/* PRINCIPLES */}
+      <section id="principles" className="py-24 border-t border-white/5">
         <div className="container mx-auto px-6">
-          <p className="text-orange-500 text-sm font-medium mb-4">Why it matters</p>
+          <p className="text-orange-500 text-sm font-medium mb-4">Operating principles</p>
           <h2 className="text-4xl md:text-5xl font-semibold tracking-tight leading-tight max-w-3xl">
-            Four risks every enterprise underestimates
+            Three ideas the model is built on
           </h2>
 
-          <div className="mt-14 grid md:grid-cols-2 gap-6">
-            {risks.map((r) => (
+          <div className="mt-14 grid md:grid-cols-3 gap-6">
+            {principles.map((r) => (
               <div
                 key={r.title}
                 className="rounded-2xl p-8 bg-white/[0.03] border border-white/10"
@@ -176,12 +165,12 @@ export default function AiShadowOperating() {
         </div>
       </section>
 
-      {/* THE MODEL — three pillars */}
+      {/* THE MODEL */}
       <section id="model" className="py-24 border-t border-white/5">
         <div className="container mx-auto px-6">
-          <p className="text-orange-500 text-sm font-medium mb-4">The operating model</p>
+          <p className="text-orange-500 text-sm font-medium mb-4">The model</p>
           <h2 className="text-4xl md:text-5xl font-semibold tracking-tight leading-tight max-w-3xl">
-            Three pillars: Visibility, Control, Insight
+            Build → Operate → Compound
           </h2>
 
           <div className="mt-14 space-y-6">
@@ -206,9 +195,9 @@ export default function AiShadowOperating() {
       {/* BENEFITS */}
       <section id="benefits" className="py-24 border-t border-white/5">
         <div className="container mx-auto px-6">
-          <p className="text-orange-500 text-sm font-medium mb-4">What good looks like</p>
+          <p className="text-orange-500 text-sm font-medium mb-4">Why it works</p>
           <h2 className="text-4xl md:text-5xl font-semibold tracking-tight leading-tight max-w-3xl">
-            Turn shadow AI into a controlled advantage
+            What a shadow-operated business actually feels like
           </h2>
 
           <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -226,25 +215,31 @@ export default function AiShadowOperating() {
         </div>
       </section>
 
-      {/* CALLOUT */}
+      {/* CALLOUT + IG */}
       <section className="py-20 border-t border-white/5">
         <div className="container mx-auto px-6">
-          <div className="max-w-3xl mx-auto rounded-2xl border border-white/10 bg-gradient-to-br from-red-600/10 to-transparent p-8 md:p-10 flex gap-5">
-            <AlertTriangle className="w-6 h-6 text-orange-500 shrink-0 mt-1" />
-            <div>
-              <p className="text-lg font-medium mb-2">Shadow AI is not a tooling problem.</p>
-              <p className="text-white/70 leading-relaxed">
-                It's an operating-model problem. Banning AI tools simply pushes them further
-                into the shadow. The organizations winning with AI are the ones that make the
-                sanctioned path the easiest, fastest path — and observe everything else.
-              </p>
-            </div>
+          <div className="max-w-3xl mx-auto rounded-2xl border border-white/10 bg-gradient-to-br from-red-600/10 to-transparent p-8 md:p-10 text-center">
+            <p className="text-2xl md:text-3xl font-semibold tracking-tight mb-3">
+              Curious how GraceAI runs in the shadows?
+            </p>
+            <p className="text-white/70 leading-relaxed mb-6">
+              Follow along as we build a company on top of the AI Shadow Operating model.
+            </p>
+            <a
+              href="https://instagram.com/graceai.music"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-white text-black font-medium px-5 py-2.5 rounded-full hover:bg-white/90 transition"
+            >
+              <Instagram className="w-4 h-4" />
+              @graceai.music on Instagram
+            </a>
           </div>
         </div>
       </section>
 
       <footer className="border-t border-white/5 py-10 text-center text-xs text-white/40">
-        © {new Date().getFullYear()} Shadow.Ops — informational overview by GraceAI.{" "}
+        © {new Date().getFullYear()} AI Shadow Ops — by GraceAI.{" "}
         <Link to="/" className="underline hover:text-white/70">Back to home</Link>
       </footer>
     </div>
