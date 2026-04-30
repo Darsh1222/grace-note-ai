@@ -56,10 +56,10 @@ export const Navigation = () => {
               About the<br />Developer
             </a>
             <Link 
-              to="/roofing-request" 
+              to="/ai-shadow-operating" 
               className="text-muted-foreground hover:text-foreground transition-smooth"
             >
-              Roofing<br />Services
+              AI Shadow<br />Operating
             </Link>
           </div>
 
