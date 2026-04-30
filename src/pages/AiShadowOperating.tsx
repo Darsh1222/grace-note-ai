@@ -356,10 +356,10 @@ export default function AiShadowOperating() {
           <div className="max-w-3xl mx-auto rounded-2xl border border-white/10 bg-gradient-to-br from-red-600/15 to-transparent p-10 md:p-14 text-center">
             <Layers className="w-7 h-7 text-red-500 mx-auto mb-5" />
             <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">
-              Watch a shadow-operated business get built in real time.
+              Want to take your revenue to the next level?
             </h2>
             <p className="mt-4 text-white/70">
-              Follow the GraceAI build journal — products, workflows, what works, what flops.
+              Reach out to become a partner — DM @graceai.music and let's build something together.
             </p>
             <a
               href="https://instagram.com/graceai.music"
