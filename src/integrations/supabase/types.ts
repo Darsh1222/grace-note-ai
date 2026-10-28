@@ -127,6 +127,113 @@ export type Database = {
         }
         Relationships: []
       }
+      grace_conversations: {
+        Row: {
+          created_at: string
+          id: string
+          session_id: string | null
+          source: string | null
+          updated_at: string
+          user_id: string | null
+        }
+        Insert: {
+          created_at?: string
+          id: string
+          session_id?: string | null
+          source?: string | null
+          updated_at?: string
+          user_id?: string | null
+        }
+        Update: {
+          created_at?: string
+          id?: string
+          session_id?: string | null
+          source?: string | null
+          updated_at?: string
+          user_id?: string | null
+        }
+        Relationships: []
+      }
+      grace_feedback: {
+        Row: {
+          comment: string | null
+          conversation_id: string
+          created_at: string
+          event_type: string
+          id: string
+          message_id: string | null
+          rating: string | null
+          session_id: string | null
+          source: string | null
+          tag: string | null
+          turn_index: number | null
+          user_id: string | null
+        }
+        Insert: {
+          comment?: string | null
+          conversation_id: string
+          created_at?: string
+          event_type: string
+          id?: string
+          message_id?: string | null
+          rating?: string | null
+          session_id?: string | null
+          source?: string | null
+          tag?: string | null
+          turn_index?: number | null
+          user_id?: string | null
+        }
+        Update: {
+          comment?: string | null
+          conversation_id?: string
+          created_at?: string
+          event_type?: string
+          id?: string
+          message_id?: string | null
+          rating?: string | null
+          session_id?: string | null
+          source?: string | null
+          tag?: string | null
+          turn_index?: number | null
+          user_id?: string | null
+        }
+        Relationships: []
+      }
+      grace_messages: {
+        Row: {
+          conversation_id: string
+          created_at: string
+          id: string
+          role: string
+          text: string
+          turn_index: number | null
+        }
+        Insert: {
+          conversation_id: string
+          created_at?: string
+          id: string
+          role: string
+          text: string
+          turn_index?: number | null
+        }
+        Update: {
+          conversation_id?: string
+          created_at?: string
+          id?: string
+          role?: string
+          text?: string
+          turn_index?: number | null
+        }
+        Relationships: [
+          {
+            foreignKeyName: "grace_messages_conversation_id_fkey"
+            columns: ["conversation_id"]
+            isOneToOne: false
+            referencedRelation: "grace_conversations"
+            referencedColumns: ["id"]
+          },
+        ]
+      }
       guest_photos: {
         Row: {
           created_at: string
@@ -525,12 +632,12 @@ export type Tables<
   DefaultSchemaTableNameOrOptions extends
     | keyof (DefaultSchema["Tables"] & DefaultSchema["Views"])
     | { schema: keyof DatabaseWithoutInternals },
-  TableName extends DefaultSchemaTableNameOrOptions extends {
+  TableName extends (DefaultSchemaTableNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof (DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"] &
         DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Views"])
-    : never = never,
+    : never) = never,
 > = DefaultSchemaTableNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -554,11 +661,11 @@ export type TablesInsert<
   DefaultSchemaTableNameOrOptions extends
     | keyof DefaultSchema["Tables"]
     | { schema: keyof DatabaseWithoutInternals },
-  TableName extends DefaultSchemaTableNameOrOptions extends {
+  TableName extends (DefaultSchemaTableNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never,
+    : never) = never,
 > = DefaultSchemaTableNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -579,11 +686,11 @@ export type TablesUpdate<
   DefaultSchemaTableNameOrOptions extends
     | keyof DefaultSchema["Tables"]
     | { schema: keyof DatabaseWithoutInternals },
-  TableName extends DefaultSchemaTableNameOrOptions extends {
+  TableName extends (DefaultSchemaTableNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[DefaultSchemaTableNameOrOptions["schema"]]["Tables"]
-    : never = never,
+    : never) = never,
 > = DefaultSchemaTableNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -604,11 +711,11 @@ export type Enums<
   DefaultSchemaEnumNameOrOptions extends
     | keyof DefaultSchema["Enums"]
     | { schema: keyof DatabaseWithoutInternals },
-  EnumName extends DefaultSchemaEnumNameOrOptions extends {
+  EnumName extends (DefaultSchemaEnumNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[DefaultSchemaEnumNameOrOptions["schema"]]["Enums"]
-    : never = never,
+    : never) = never,
 > = DefaultSchemaEnumNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
@@ -621,11 +728,11 @@ export type CompositeTypes<
   PublicCompositeTypeNameOrOptions extends
     | keyof DefaultSchema["CompositeTypes"]
     | { schema: keyof DatabaseWithoutInternals },
-  CompositeTypeName extends PublicCompositeTypeNameOrOptions extends {
+  CompositeTypeName extends (PublicCompositeTypeNameOrOptions extends {
     schema: keyof DatabaseWithoutInternals
   }
     ? keyof DatabaseWithoutInternals[PublicCompositeTypeNameOrOptions["schema"]]["CompositeTypes"]
-    : never = never,
+    : never) = never,
 > = PublicCompositeTypeNameOrOptions extends {
   schema: keyof DatabaseWithoutInternals
 }
