@@ -13,9 +13,9 @@ const Tomorrow = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="flex min-h-screen flex-col bg-background">
       <Navigation />
-      <main className="pt-32 pb-24">
+      <main className="flex-1 pt-32 pb-24">
         <div className="container mx-auto px-6">
           <div className="max-w-3xl mx-auto">
             {/* Product badge */}
