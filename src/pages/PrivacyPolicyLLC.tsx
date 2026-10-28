@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Footer } from "@/components/Footer";
 
 const PrivacyPolicyLLC = () => {
   return (
@@ -114,6 +115,7 @@ const PrivacyPolicyLLC = () => {
           <Link to="/" className="text-blue-600 hover:underline text-sm">← Back to Home</Link>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

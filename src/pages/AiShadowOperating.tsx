@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Footer } from "@/components/Footer";
 import { useState } from "react";
 import {
   ArrowRight,
@@ -374,10 +375,7 @@ export default function AiShadowOperating() {
         </div>
       </section>
 
-      <footer className="border-t border-white/5 py-10 text-center text-xs text-white/40">
-        © {new Date().getFullYear()} AI Shadow Ops — by GraceAI.{" "}
-        <Link to="/" className="underline hover:text-white/70">Back to home</Link>
-      </footer>
+      <Footer />
     </div>
   );
 }
