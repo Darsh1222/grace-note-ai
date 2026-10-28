@@ -10,6 +10,7 @@ import TermsOfService from "./pages/TermsOfService";
 import PrivacyPolicyLLC from "./pages/PrivacyPolicyLLC";
 import TermsOfServiceLLC from "./pages/TermsOfServiceLLC";
 import AiShadowOperating from "./pages/AiShadowOperating";
+import Tomorrow from "./pages/Tomorrow";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="/privacy-policy-llc" element={<PrivacyPolicyLLC />} />
           <Route path="/terms-of-service-llc" element={<TermsOfServiceLLC />} />
           <Route path="/ai-shadow-operating" element={<AiShadowOperating />} />
+          <Route path="/tomorrow" element={<Tomorrow />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

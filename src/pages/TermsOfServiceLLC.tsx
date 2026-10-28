@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { Footer } from "@/components/Footer";
 
 const TermsOfServiceLLC = () => {
   return (
@@ -66,6 +67,7 @@ const TermsOfServiceLLC = () => {
           <Link to="/" className="text-blue-600 hover:underline text-sm">← Back to Home</Link>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };

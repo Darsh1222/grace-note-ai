@@ -61,6 +61,12 @@ export const Navigation = () => {
             >
               AI Shadow<br />Operating
             </Link>
+            <Link 
+              to="/tomorrow" 
+              className="text-muted-foreground hover:text-foreground transition-smooth"
+            >
+              Tomorrow
+            </Link>
           </div>
 
           <div className="flex items-center space-x-4">

@@ -1,8 +1,9 @@
+import { Link } from "react-router-dom";
 import graceaiLogo from "@/assets/graceai-logo.png";
 export const Footer = () => {
   return <footer className="bg-background border-t border-border/50 py-12">
       <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-4 gap-8">
+        <div className="grid md:grid-cols-5 gap-8">
           {/* Brand */}
           <div className="space-y-4 md:col-span-2">
             <div className="flex items-center space-x-2">
@@ -14,6 +15,15 @@ export const Footer = () => {
             <p className="text-muted-foreground text-sm">
               AI-powered music practice analysis for musicians who want to perfect their craft.
             </p>
+          </div>
+
+          {/* Products */}
+          <div className="space-y-4">
+            <h3 className="font-semibold text-foreground">Products</h3>
+            <div className="space-y-2 text-sm">
+              <a href="https://apps.apple.com/us/app/graceai-master-your-music/id6753151596" target="_blank" rel="noopener noreferrer" className="block text-muted-foreground hover:text-foreground transition-smooth">GraceAI</a>
+              <Link to="/tomorrow" className="block text-muted-foreground hover:text-foreground transition-smooth">Tomorrow</Link>
+            </div>
           </div>
 
           {/* Legal */}
@@ -35,7 +45,11 @@ export const Footer = () => {
           </div>
         </div>
 
-        <div className="border-t border-border/50 mt-8 pt-8 text-center">
+        <div className="border-t border-border/50 mt-8 pt-8 text-center space-y-3">
+          <p className="text-muted-foreground text-sm">
+            GraceAI Innovations LLC, 30 N Gould St Ste R, Sheridan, WY 82801 ·{" "}
+            <a href="mailto:darsh@graceai.music" className="hover:text-foreground transition-smooth">darsh@graceai.music</a>
+          </p>
           <p className="text-muted-foreground text-sm">© 2025 GraceAI. All rights reserved. Made with ❤️ for musicians.</p>
         </div>
       </div>
